@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>513 Final Project</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>User Login</h1>
+    <form method="post" action="/users/login">
+      <input type="text" name="loginUsername" placeholder=" user name"> <%= loginMessage %>
+      <br><br>
+      <input type="text" name="loginPassword" placeholder=" password">
+      <br><br>
+      <input type="submit" value=" Login">
+    </form>
+    
+    <br><br>
+
+    <h1>SignUp</h1>
+    <form method="post" action="/users/signup">
+        <input type="text" name="signupUsername" placeholder=" user name"> <%= signupMessage %>
+        <br><br>
+        <input type="text" name="signupEmail" placeholder=" email address">
+        <br><br>
+        <input type="text" name="signupPassword" placeholder=" password">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
