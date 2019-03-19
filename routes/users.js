@@ -18,7 +18,6 @@ router.post('/login', function(req, res, next) {
             console.log('------login success------');
             res.render('index',{loginMessage: 'login success', signupMessage: ''});
         }else if(status === 0){
-            console.log("empty username or password");
             res.render('index',{loginMessage: 'empty username or password', signupMessage: ''});
         }else {
             console.log('------login failed------');
@@ -46,6 +45,9 @@ router.post('/signup', function(req, res, next) {
             res.render('index', message);
         }else if(status === 2){
             message =  {loginMessage: '', signupMessage: 'success'};
+            res.render('index', message);
+        }else if(status === 3){
+            message =  {loginMessage: '', signupMessage: 'invalid email format'};
             res.render('index', message);
         }else {
             message =  {loginMessage: '', signupMessage: 'unknown-error'};
